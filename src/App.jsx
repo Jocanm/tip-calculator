@@ -2,7 +2,7 @@ import './App.css';
 
 function App() {
   return (
-    <div>
+    <div className="bg-cyan-strong">
       tip calculator
     </div>
   );
