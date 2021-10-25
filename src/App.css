@@ -1,0 +1,50 @@
+*{
+    font-family: 'space mono';
+}
+
+body{
+    @apply bg-cyan-light
+}
+
+.custom-input{
+    @apply bg-cyan-lightest appearance-none rounded-sm w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none;
+}
+
+.cont{
+    position: relative;
+}
+
+.cont img{
+    position: absolute;
+}
+
+.cont i{
+    position: absolute;
+    left: 10px;
+    top: 40px;
+    @apply text-cyan-dark; 
+}
+
+.special-input{
+    text-align:right;
+    padding-right: 15px;
+    @apply text-cyan-strongest;
+    font-weight: 700;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.new-input{
+    padding: 0px;
+    margin: 0px;
+    width: 55px;
+    text-align: center;
+}
+
+.boton-1{
+    @apply bg-cyan-strongest;
+}
+
+
