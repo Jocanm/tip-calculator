@@ -2,7 +2,7 @@ import './App.css';
 
 function App() {
   return (
-    <div>
+    <div className="text-2xl ">
       tip calculator
     </div>
   );
