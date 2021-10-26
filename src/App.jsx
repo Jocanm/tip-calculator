@@ -1,7 +1,5 @@
 import './App.css';
 import logo from './images/logo.svg'
-import dollarIcon from './images/icon-dollar.svg'
-import personIcon from './images/icon-person.svg'
 import ResultOperation from './component/ResultOperation';
 import { useState } from 'react';
 
