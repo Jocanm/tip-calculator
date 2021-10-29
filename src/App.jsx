@@ -2,7 +2,7 @@ import './App.css';
 import logo from './images/logo.svg'
 import ResultOperation from './component/ResultOperation';
 import { nanoid } from 'nanoid';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function App() {
 
@@ -89,12 +89,11 @@ const TipButtons = ({ text, porc, setPorc, porcInput, setPorcInpute }) => {
 
   const handleCustomPorc = ({ target }) => {
     setPorcInpute(target.value)
-    if (porcInput && porc !== "") setPorc("")
   }
 
   const handleButtonPorc = (value) => {
     setPorc(value)
-    if (porc && porcInput !== "") setPorcInpute("")
+    setPorcInpute("")
   }
 
   return (
@@ -120,6 +119,7 @@ const TipButtons = ({ text, porc, setPorc, porcInput, setPorcInpute }) => {
           className="tip-input text-right"
           value={porcInput}
           onChange={handleCustomPorc}
+          onClick={()=>(setPorc(""))}
         />
 
       </div>
