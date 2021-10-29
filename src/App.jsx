@@ -1,5 +1,5 @@
 import './App.css';
-import logo from '../public/images/logo.svg'
+import logo from './images/logo.svg'
 import ResultOperation from './component/ResultOperation';
 import { nanoid } from 'nanoid';
 import {  useState } from 'react';
