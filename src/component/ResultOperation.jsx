@@ -35,7 +35,9 @@ const TipAumount = ({ bill, total, porc }) => {
     useEffect(() => {
         if (bill > 0 && total > 0 && porc > 0) {
             let por = (bill * porc) / 100
-            setTotalTip(por / total)
+            let final = por/total
+            let round = Math.round((final + Number.EPSILON)*100)/100;
+            setTotalTip(round)
         } else {
             setTotalTip('0.00')
         }
@@ -61,7 +63,9 @@ const Total = ({ bill, total }) => {
 
     useEffect(() => {
         if (bill > 0 && total > 0) {
-            setTotalPerson(bill / total)
+            let count = bill / total
+            let round = Math.round((count + Number.EPSILON)*100)/100;
+            setTotalPerson(round)
         } else {
             setTotalPerson('0.00')
         }
