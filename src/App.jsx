@@ -1,8 +1,8 @@
 import './App.css';
-import logo from './images/logo.svg'
+import logo from '../public/images/logo.svg'
 import ResultOperation from './component/ResultOperation';
 import { nanoid } from 'nanoid';
-import { useEffect, useState } from 'react';
+import {  useState } from 'react';
 
 function App() {
 
