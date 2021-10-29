@@ -24,8 +24,8 @@ function App() {
         src={logo} alt="logo"
         className="w-16 mb-9"
       />
-      <div className="flex flex-col sm:flex-row justify-between items-center bg-white rounded-lg p-4 h-auto w-fll sm:w-auto">
-        <main className="mb-4 sm:mb-0 mr-0 sm:mr-4 w-full h-full">
+      <div className="flex flex-col sm:flex-row justify-between items-center bg-white rounded-lg p-4 h-auto w-fll">
+        <main className="mb-4 sm:mb-0 mr-0 sm:mr-4 w-full h-full sm:h-full">
           <CustomInput
             value={bill}
             setValue={setBill}
