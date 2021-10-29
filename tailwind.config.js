@@ -4,6 +4,9 @@ module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    screens: {
+      'sm': '700px'
+    },
     colors: {
       // Build your palette here
       transparent: 'transparent',
@@ -24,7 +27,7 @@ module.exports = {
       teal: colors.teal,
       // cyan: colors.cyan,
       sky: colors.sky,
-      white:colors.white,
+      white: colors.white,
       indigo: colors.indigo,
       violet: colors.violet,
       fuchsia: colors.fuchsia,

@@ -1,9 +1,11 @@
-*{
+/* *{
     font-family: 'space mono';
-}
+} */
 
 body{
-    @apply bg-cyan-light
+    @apply bg-cyan-light;
+    font-family: "Space Mono", monospace;
+    /* overflow: hidden; */
 }
 
 .custom-input{
@@ -44,7 +46,30 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .boton-1{
-    @apply bg-cyan-strongest;
+    @apply bg-cyan-strongest px-7;
+    border-radius: 0.3rem;
+    color: white;
+    font-weight: bold;
 }
 
+.btn-cont{
+    display: grid;
+    /* grid-template-columns: repeat(3,30%);
+    grid-template-rows: repeat(2,50%); */
+    gap: 8px;
+    
+}
 
+.tip-input{
+    text-align: center;
+    @apply text-cyan-strongest bg-cyan-lightest appearance-none rounded-md w-full py-2 h-10 px-1 leading-tight focus:outline-none tracking-wider font-semibold placeholder-cyan-darkest;
+}
+
+input{
+    border: 2px solid white;
+    border-radius: 0.3rem;
+}
+
+input:hover{
+    @apply border-2 border-cyan-strong rounded-md;
+}

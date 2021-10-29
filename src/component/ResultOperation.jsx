@@ -1,7 +1,66 @@
-const ResultOperation = () => {
+import { useEffect, useState } from "react"
+
+const ResultOperation = ({ bill, porc, total, reset }) => {
+
     return (
-        <div className="bg-cyan-strongest rounded-md p-5 w-full h-full">
-            Resultado operación
+        <div className="bg-cyan-strongest rounded-lg pt-10 pb-5 sm:py-10 w-full h-full items-center flex flex-col justify-between">
+            <div className="flex flex-col h-1/2">
+                <TipAumount />
+                <Total />
+            </div>
+            <button className="bg-cyan-strong rounded-sm px-28 py-1 text-cyan-strongest font-semibold mt-6 sm:mt-0">RESET</button>
+        </div>
+    )
+}
+
+const TipAumount = ({ bill, total, porc }) => {
+
+    const [totalTip, setTotalTip] = useState(0)
+
+    useEffect(() => {
+        if (bill > 0 && total > 0 && porc > 0) {
+            let por = (bill * porc) / 100
+            setTotalTip(por / total)
+        } else {
+            setTotalTip('0.00')
+        }
+    }, [total, porc, bill])
+
+    return (
+        <div className="grid grid-cols-2 gap-20 gap-x-14 sm:gap-20 justify-around w-full items-center h-full">
+            <div className="flex flex-col justify-between">
+                <h2 className="text-white text-sm font-semibold">Tip Amount</h2>
+                <p className="text-gray-300 text-xs">/ person</p>
+            </div>
+            <div className="text-2xl text-cyan-strong font-bold tex">
+                <h2>{`$${totalTip}`}</h2>
+            </div>
+        </div>
+    )
+}
+
+
+const Total = ({ bill=0, total=1 }) => {
+
+    const [totalPerson, setTotalPerson] = useState(0)
+
+    useEffect(() => {
+        if (bill > 0 && total > 0) {
+            setTotalPerson(bill / total)
+        } else {
+            setTotalPerson('0.00')
+        }
+    }, [bill, total])
+
+    return (
+        <div className="grid grid-cols-2 gap-20 gap-x-14 sm:gap-20 justify-around w-full items-center h-full">
+            <div className="flex flex-col justify-between">
+                <h2 className="text-white text-sm font-semibold">Tip Amount</h2>
+                <p className="text-gray-300 text-xs">/ person</p>
+            </div>
+            <div className="text-2xl text-cyan-strong font-bold tex">
+                <h2>{`$${totalPerson}`}</h2>
+            </div>
         </div>
     )
 }
