@@ -23,7 +23,7 @@ body{
 .cont i{
     position: absolute;
     left: 10px;
-    top: 40px;
+    top: 32px;
     @apply text-cyan-dark; 
 }
 
@@ -46,10 +46,9 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .boton-1{
-    @apply bg-cyan-strongest px-7;
     border-radius: 0.3rem;
-    color: white;
-    font-weight: bold;
+    /* color: white; */
+    /* font-weight: bold; */
 }
 
 .btn-cont{
